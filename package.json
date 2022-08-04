@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "develop": "webpack serve --mode=development",
-    "distribute": "webpack --mode=production"
+    "distribute": "webpack --mode=production",
+    "publish" : "node app.js"
   },
   "keywords": [],
   "author": "",
