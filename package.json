@@ -6,7 +6,8 @@
   "scripts": {
     "develop": "webpack serve --mode=development",
     "distribute": "webpack --mode=production",
-    "publish" : "node app.js"
+    "publish" : "node app.js",
+    "change-git" : "rm -rf .git && git init"
   },
   "keywords": [],
   "author": "",

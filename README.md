@@ -7,3 +7,4 @@
 - for development use npm run-script develop
 - for distribution use npm run-script distribute
 - for publishing use npm run-script publish
+- for removing template git and establish a new one run npm run-script change-git
