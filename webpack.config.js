@@ -44,6 +44,7 @@ const devServer = {
 	hot: true,
 	compress: true,
 	historyApiFallback: true,
+	https:true
 };
 
 module.exports = (env, argv) => {
