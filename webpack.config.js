@@ -2,7 +2,7 @@ const path = require('path');
 
 let config = {
 	mode: '',
-	entry: './src/index.js',
+	entry: './src/debug/index.js',
 
 	module: {
 		rules: [
@@ -31,26 +31,28 @@ const build = {
 };
 
 const distribute = {
-	filename: 'main.js',
+	filename: 'ffwdme-debug.js',
 	path: path.resolve(__dirname, 'dist'),
 };
 
 const devServer = {
 	static: {
-		directory: path.resolve(__dirname, 'build'),
+		directory: path.resolve(__dirname, 'static'),
 	},
 	port: 3000,
-	open: true,
+	open: {
+		target: ['demo.html'],
+	},
 	hot: true,
 	compress: true,
 	historyApiFallback: true,
-	https:true
+	https: true,
 };
 
 module.exports = (env, argv) => {
 	if (argv.mode === 'development') {
 		config.output = build;
-    config.devServer = devServer
+		config.devServer = devServer;
 	} else {
 		config.output = distribute;
 	}
